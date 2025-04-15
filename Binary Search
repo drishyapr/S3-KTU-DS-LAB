@@ -1,0 +1,21 @@
+#include<stdio.h>
+void BinarySearch(int arr[],int low,int high,int item)
+{
+    int mid,flag=0;
+    while(low<=high)
+    {
+        if(arr[mid]=item)
+        {
+            flag=1;
+            break;
+        }
+        else if(arr[mid]>item)
+            high=mid-1;
+        else
+            low=mid+1;
+    }
+    if(flag==0)
+        printf("Search element not found");
+    else
+        printf("Search element found at index %d",mid);
+}
